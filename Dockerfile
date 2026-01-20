@@ -10,7 +10,7 @@ RUN gradle build --no-daemon --exclude-task test
 
 
 # Create the containerized app
-FROM eclipse-temurin:11.0.21_9-jre-jammy
+FROM eclipse-temurin:11.0.29_7-jre-jammy
 LABEL maintainer="FOSSLight <fosslight-dev@lge.com>"
 
 COPY --from=build /home/gradle/src/build/libs/*.war /app/FOSSLight.war
